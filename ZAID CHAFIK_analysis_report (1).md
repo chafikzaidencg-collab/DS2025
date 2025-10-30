@@ -1,6 +1,6 @@
 # Rapport d'Analyse Approfondie du PIB des Principales Économies Mondiales
+A.ZAID ![WhatsApp Image 2025-10-30 at 11 42 04](https://github.com/user-attachments/assets/d2d92a52-64ca-4f5a-93bc-ad332640f304)
 
----
 
 ## 1. INTRODUCTION ET CADRAGE DE L'ANALYSE
 
