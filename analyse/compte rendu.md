@@ -1,84 +1,39 @@
-# **Fiscalité des Produits de la Finance Participative au Maroc**
+# Analyse des Données du Football Mondial ⚽
 
-## **Introduction**
-La finance participative occupe une place croissante dans le système financier marocain. 
-Afin d'assurer sa compétitivité vis-à-vis de la finance conventionnelle, le législateur a mis en place 
-un cadre fiscal spécifique pour chaque produit.  
-Dans cette présentation, nous allons examiner les principaux produits : **Mourabaha, Sukuk, Ijara 
-Montahia Bitamlik, Takaful, Salam et Istisna’a**, et mettre en évidence les particularités fiscales 
-propres à chacun.
+## Introduction
 
----
+Ce document présente une analyse exploratoire des données (EDA) réalisée sur un ensemble de données concernant les résultats de matchs de football internationaux et les marqueurs de buts mondiaux. L'objectif principal de cette analyse est d'identifier les tendances historiques, la distribution des résultats, et les performances des équipes nationales à travers le temps.
 
-# **Développement**
+L'analyse a été effectuée à l'aide de librairies Python courantes telles que **Pandas** et **NumPy** pour la manipulation des données, et **Matplotlib** et **Seaborn** pour la visualisation.
 
-## **1. Produit Mourabaha**
+## Développement : Exploration et Analyse des Données
 
-### **TVA**
-- La marge de la banque est soumise à une TVA réduite de **10%**, déductible pour la banque.  
-- La TVA sur le bien n’est **pas déductible pour la banque**, mais elle l’est pour le client assujetti.  
-- Le logement social bénéficie d’une **exonération de TVA** sous conditions :  
-  superficie de 50 à 80 m², prix ≤ 250 000 DH HT, et affectation comme résidence principale pendant 4 ans.
+### 1. Préparation des données
 
-### **Droits d’enregistrement**
-- La banque paie les droits sur le prix du bien hors marge.  
-- **3%** : logements sociaux et logements à faible valeur immobilière.  
-- **4%** : locaux construits (habitation, commercial, professionnel, administratif).  
-- **5%** : terrains nus ou constructions destinées à démolition.  
-- Droit fixe de **200 DH** lors de la mise à disposition du bien au client.
+Le jeu de données principal (contenant les résultats des matchs) comporte **48 673 entrées** et 9 colonnes. Aucune valeur manquante n'a été détectée dans les colonnes clés.
 
----
+Plusieurs caractéristiques ont été dérivées pour enrichir l'analyse :
+* `total_goals` : Le nombre total de buts marqués dans le match.
+* `goal_diff` : La différence de buts (domicile - extérieur).
+* `match_result` : Le résultat du match, classé en `Home Win` (Victoire à Domicile), `Away Win` (Victoire à l'Extérieur) ou `Draw` (Match Nul).
 
-## **2. Produit Sukuk**
+### 2. Tendances Historiques
 
-### **Retenue à la source**
-- Les revenus des Sukuk sont soumis à une **RAS de 20%** sur le montant hors TVA.
+L'étude des données a révélé des tendances notables :
 
-### **Personnes morales / professionnels**
-- Taux : **20%**.  
-- Nature : **non libératoire** (constitue un acompte d’impôt).  
-- Imputation : elle est imputable sur l’IS ou l’IR professionnel, avec droit de restitution en cas d’excédent.
+* **Fréquence des matchs :** Le nombre de matchs joués annuellement a considérablement augmenté au fil du temps, marquant une croissance particulièrement forte à partir du début du 20e siècle et après la Seconde Guerre mondiale.
+* **Moyenne de buts :** La moyenne de buts par match, qui a atteint des sommets au début du 20e siècle, s'est stabilisée au cours des dernières décennies, tournant autour de 2,5 à 3 buts par match.
 
-### **Personnes physiques non professionnelles**
-- Taux : **30%**.  
-- Nature : **libératoire** de l’IR.
+### 3. Résultats et Performances
 
----
+L'analyse des résultats des matchs historiques révèle une prépondérance des victoires à domicile :
 
-## **3. Ijara Montahia Bitamlik (IMB)**
+* **Distribution des résultats :** Les **victoires à domicile** (`Home Win`) sont de loin le résultat le plus fréquent, suivies par les **matchs nuls** (`Draw`), qui sont légèrement plus fréquents que les **victoires à l'extérieur** (`Away Win`).
+* **Scores fréquents :** Les scores les plus courants dans l'histoire sont **1-1**, **1-0** et **2-1**. La majorité des matchs se terminent avec un faible nombre de buts (2 ou 3 au total).
+* **Équipes dominantes :** Des équipes historiques comme le **Brésil**, l'**Uruguay**, l'**Argentine** et l'**Angleterre** font partie des 20 équipes ayant joué le plus de matchs. Le **Brésil** se distingue également comme l'équipe ayant marqué le plus grand nombre total de buts.
+* **Corrélation :** Une forte corrélation positive est observée entre le score à domicile, le score à l'extérieur et le nombre total de buts.
 
-### **TVA**
-- La TVA de **10%** s’applique uniquement sur la **marge locative**, et non sur le prix du bien.  
-- Le logement social est exonéré de TVA si le client l’occupe comme résidence principale pendant **4 ans**.
+## Conclusion
 
-### **Impôt sur le revenu**
-- La marge locative est **déductible** dans la limite de **10% du revenu global imposable**.  
-- L’exonération du profit de cession est accordée si le bien est occupé au moins **5 ans**.
-
-### **Droits d’enregistrement**
-- Les taux sont identiques à ceux du produit **Mourabaha**.
-
----
-
-## **4. Contrat Takaful**
-
-- Le taux d’IS des entreprises Takaful atteint **39,25% en 2025**, dans le cadre d’une réforme visant **40% en 2026**.  
-- Les prestations des contrats Takaful-investissement sont **exonérées d’IR** si la durée minimale du contrat est de **8 ans**.
-
----
-
-## **5. Produits Salam et Istisna’a**
-
-- La marge de financement est soumise à une TVA réduite de **10%**, déductible pour la banque.  
-- La TVA sur le bien n’est **pas déductible pour la banque**, mais elle est **déductible pour l’acquéreur assujetti**.
-
----
-
-# **Conclusion**
-La fiscalité des produits participatifs au Maroc a été pensée pour garantir une certaine neutralité 
-fiscale entre finance participative et finance conventionnelle.  
-Chaque produit présente toutefois des spécificités propres visant à respecter les principes de la 
-finance islamique tout en assurant la sécurité juridique et la clarté fiscale pour les opérateurs.  
-Cette harmonisation contribue au développement progressif et durable du secteur de la finance 
-participative dans le paysage financier marocain.
+L'analyse des données du football mondial confirme une augmentation marquée du nombre de matchs joués au fil des ans, reflétant la croissance du sport. Elle met en évidence un **avantage clair pour l'équipe jouant à domicile** et une tendance aux **scores relativement bas**. Historiquement, le **Brésil** se positionne comme l'équipe la plus prolifique en termes de buts marqués.
 
